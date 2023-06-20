@@ -1,21 +1,21 @@
 #!/usr/local/bin/bash
 
 #############################################################################################################################################
-# Project			:	BASH																												#
-# Description		:	Shell script for issuing GET API call to BitBucket in order to retrieve all pull requests that the api user			#
-#							is able to see. BitBucket doesn't allow users to pull data that they don't own, so this script isn't an 		#
-#							end-all, be-all. However, across teams, it should be very accurate because most- if not all- teams have 		#
-#							all dev members setup to be default reviewers. Therefore if one teammember creates a PR, then any member 		#
-#							of the team should have been able to see it. Therefore reporting should be accurate.							#
-#																																			#
-# Input Params		:	BitBucket User Name - Required - the name of the teammember to search for as PR author								#
-#																																			#
-# Usage				:	./pullRequestHistory.sh WDemis																						#
-#						This script uses curl to connect to BitBucket and expects a .netrc file to exist in /user/home						#
-#																																			#
-# Created by		:	Willy Demis																								#
-# Created date		:	2023-05-19																											#
-# Version			:	1.0																													#
+# Project		:	BASH															#
+# Description		:	Shell script for issuing GET API call to BitBucket in order to retrieve all pull requests that the api user		#
+#				is able to see. BitBucket doesn't allow users to pull data that they don't own, so this script isn't an 		#						
+#				end-all, be-all. However, across teams, it should be very accurate because most- if not all- teams have 		#
+#				all dev members setup to be default reviewers. Therefore if one teammember creates a PR, then any member 		#
+#				of the team should have been able to see it. Therefore reporting should be accurate.					#
+#																			#
+# Input Params		:	BitBucket User Name - Required - the name of the teammember to search for as PR author					#
+#																			#
+# Usage			:	./pullRequestHistory.sh WDemis												#
+#					This script uses curl to connect to BitBucket and expects a .netrc file to exist in /user/home			#
+#																			#
+# Created by		:	Willy Demis														#
+# Created date		:	2023-05-19														#
+# Version		:	1.0															#
 #############################################################################################################################################
 
 function timestamp()
